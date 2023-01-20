@@ -2,6 +2,14 @@ name: Trigger gate-way auto deployment
 on:
   # 手動実行用トリガー
   workflow_dispatch:
+  
+  # Add a trigger
+  # 自動実行用トリガー
+  push:
+    branches: 
+      [ master ]
+    paths:
+    - 'spring-petclinic-api-gateway/**'
 
 env:
   AZURE_SUBSCRIPTION: 3c2c8146-8e4d-4a49-abc9-cb35c4c23d7b
